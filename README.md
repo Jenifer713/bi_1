@@ -7,6 +7,7 @@ Material educativo interactivo sobre Business Intelligence, toma de decisiones b
 - `index.html`: conceptos de BI, ejemplos aplicados a restaurantes, diagrama ETL y cuestionario gamificado.
 - `dashboard.html`: KPIs, cinco gráficas interactivas y tabla de pedidos filtrable.
 - `silabo.html`: guía visual interactiva del sílabo universitario, presentada como centro de control de misiones BI.
+- `js/silabo.js` y `css/silabo.css`: consola exploratoria de PlasTrack con zonas y etapas del flujo BI.
 - `css/`: sistema de diseño compartido, estilos de la página educativa y estilos del dashboard.
 - `js/`: utilidades comunes, lógica del cuestionario y datos e inicialización de Chart.js.
 - `img/`: espacio para recursos visuales propios en formato SVG; no se requieren imágenes binarias.

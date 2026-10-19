@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/silabo.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/silabo.js" defer></script>
 </head>
 <body class="syllabus-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -67,7 +68,7 @@
         <div class="section-heading">
           <span class="eyebrow">PRIORIDAD DE LA MISIÓN · CÓMO APRENDERÁS</span>
           <h2>La metodología es tu ventaja estratégica</h2>
-          <p>Tres formas activas de aprender conectan cada unidad con un reto real. La asignatura avanza de comprender BI a construir una solución.</p>
+          <p>Tres formas activas de aprender conectan cada unidad con situaciones profesionales. La asignatura avanza de comprender BI a construir una solución.</p>
         </div>
         <div class="pedagogy-grid">
           <article class="pedagogy-card pedagogy-card--cooperative">
@@ -237,6 +238,68 @@
             </div>
             <p class="plastrack-card__impact">Los dashboards y las alertas tempranas facilitan reportes accesibles para el sector pesquero (CEIPA) y gestores ambientales.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explorer-section section-padding" id="explorador-plastrack" aria-labelledby="explorer-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">LABORATORIO VISUAL · EXPLORA EL FLUJO DE INFORMACIÓN</span>
+          <h2 id="explorer-title">De una señal satelital a una decisión útil</h2>
+          <p>Explora una simulación didáctica de PlasTrack: cambia de zona y recorre cómo el mismo dato se transforma en información para distintos usuarios.</p>
+        </div>
+        <div class="explorer-console">
+          <div class="explorer-console__top">
+            <div><span class="explorer-console__live"><i></i> SIMULACIÓN ACTIVA</span><h3>Consola de observación costera</h3></div>
+            <span class="explorer-console__source"><i class="bi bi-satellite" aria-hidden="true"></i> COPERNICUS · CMEMS</span>
+          </div>
+          <div class="explorer-zones">
+            <span class="explorer-zones__label">ZONA DE OBSERVACIÓN</span>
+            <div class="explorer-zones__buttons" role="group" aria-label="Seleccionar zona de observación">
+              <button class="zone-button is-selected" type="button" data-zone="archipielago" aria-pressed="true">Archipiélago</button>
+              <button class="zone-button" type="button" data-zone="isabela" aria-pressed="false">Isabela</button>
+              <button class="zone-button" type="button" data-zone="santa-cruz" aria-pressed="false">Santa Cruz</button>
+              <button class="zone-button" type="button" data-zone="san-cristobal" aria-pressed="false">San Cristóbal</button>
+            </div>
+          </div>
+          <div class="explorer-kpis" aria-label="Indicadores de la zona seleccionada">
+            <article class="explorer-kpi"><span><i class="bi bi-water" aria-hidden="true"></i> Densidad estimada</span><strong id="zoneDensity" aria-live="polite">—</strong><small>partículas / m³ · valor simulado</small></article>
+            <article class="explorer-kpi"><span><i class="bi bi-geo" aria-hidden="true"></i> Cobertura analizada</span><strong id="zoneCoverage" aria-live="polite">—</strong><small>área costera observada</small></article>
+            <article class="explorer-kpi"><span><i class="bi bi-clipboard-data" aria-hidden="true"></i> Escenas procesadas</span><strong id="zoneScenes" aria-live="polite">—</strong><small>muestras de demostración</small></article>
+          </div>
+          <div class="explorer-workspace">
+            <div class="explorer-workflow">
+              <span class="explorer-workflow__label">FLUJO DE INTELIGENCIA</span>
+              <div class="explorer-workflow__steps" role="group" aria-label="Explorar etapas del flujo de inteligencia">
+                <button class="workflow-step is-selected" type="button" data-stage="signal" aria-pressed="true"><span>01</span><i class="bi bi-broadcast" aria-hidden="true"></i><strong>Señal</strong><small>Fuente</small></button>
+                <span class="explorer-workflow__arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                <button class="workflow-step" type="button" data-stage="etl" aria-pressed="false"><span>02</span><i class="bi bi-funnel" aria-hidden="true"></i><strong>ETL</strong><small>Preparación</small></button>
+                <span class="explorer-workflow__arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                <button class="workflow-step" type="button" data-stage="dashboard" aria-pressed="false"><span>03</span><i class="bi bi-bar-chart-line" aria-hidden="true"></i><strong>Dashboard</strong><small>Análisis</small></button>
+                <span class="explorer-workflow__arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                <button class="workflow-step" type="button" data-stage="alert" aria-pressed="false"><span>04</span><i class="bi bi-bell" aria-hidden="true"></i><strong>Alerta</strong><small>Acción</small></button>
+              </div>
+              <article class="stage-insight" aria-live="polite" aria-atomic="true">
+                <div class="stage-insight__icon" id="stageIcon"><i class="bi bi-broadcast" aria-hidden="true"></i></div>
+                <div><span class="stage-insight__eyebrow" id="stageEyebrow">ETAPA 01 · FUENTE DE DATOS</span><h4 id="stageTitle">La observación comienza en el océano</h4><p id="stageDescription">Las observaciones de Copernicus y CMEMS aportan variables oceánicas y ambientales para contextualizar el monitoreo costero.</p><span class="stage-insight__output" id="stageOutput">ENTRADA · observaciones satelitales y oceánicas</span></div>
+              </article>
+            </div>
+            <figure class="explorer-chart">
+              <figcaption><span class="explorer-chart__eyebrow">LECTURA DE LA ZONA</span><strong id="chartZoneTitle">Archipiélago · señal estimada</strong><span class="explorer-chart__unit">índice de observación simulado</span></figcaption>
+              <div class="explorer-chart__bars" id="zoneChart" role="img" aria-label="Gráfica ilustrativa de señal ambiental simulada para Archipiélago">
+                <div class="explorer-chart__bar"><span></span><small>S01</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S02</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S03</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S04</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S05</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S06</small></div>
+                <div class="explorer-chart__bar"><span></span><small>S07</small></div>
+              </div>
+              <div class="explorer-chart__legend"><span><i></i> Señal relativa</span><span>Ilustración educativa · no son mediciones reales</span></div>
+            </figure>
+          </div>
+          <p class="explorer-console__note"><i class="bi bi-info-circle" aria-hidden="true"></i> Esta consola es una simulación académica: no consulta servicios de Copernicus ni representa mediciones reales de microplásticos.</p>
         </div>
       </div>
     </section>
