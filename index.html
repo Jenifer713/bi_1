@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aprende los fundamentos de Business Intelligence con ejemplos prácticos de un restaurante.">
+  <title>Fundamentos de BI | WestBite Bistro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html"><span class="brand-mark" aria-hidden="true">W</span> WestBite <span class="brand-light">| Aprende BI</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Fundamentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proceso-etl">Proceso ETL</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cuestionario">Cuestionario</a></li>
+          <li class="nav-item"><a class="nav-link nav-cta" href="dashboard.html">Ver dashboard <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="contenido">
+    <!-- Presentación del material y acceso directo al reto interactivo. -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Aprende · mide · decide</span>
+            <h1>Fundamentos de<br><span>Business Intelligence</span></h1>
+            <p class="hero-lead">Convierte los datos de cada servicio en decisiones que hacen crecer tu negocio. Aprende los conceptos clave y ponlos a prueba.</p>
+            <div class="d-flex flex-wrap gap-3 align-items-center">
+              <a class="btn btn-primary-custom" href="#cuestionario">Explorar el cuestionario <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="dashboard.html">Explorar dashboard <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-proof"><span class="proof-icon" aria-hidden="true">✦</span> Conceptos claros, aplicados a un restaurante real</div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-visual" aria-label="Ilustración de un resumen de ventas">
+              <div class="visual-top"><span>Resumen del servicio</span><span class="live-dot">● EN VIVO</span></div>
+              <div class="visual-number">$8,420 <span>+12.8%</span></div>
+              <div class="visual-caption">Ventas de esta semana</div>
+              <div class="mini-chart" aria-hidden="true">
+                <div class="chart-grid"></div>
+                <svg viewBox="0 0 420 150" role="presentation" preserveAspectRatio="none">
+                  <defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#c67b4e" stop-opacity=".27"/><stop offset="100%" stop-color="#c67b4e" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0 118 C35 108 43 94 72 102 S120 75 145 88 S193 56 216 67 S265 48 290 59 S335 19 360 36 S394 14 420 8 L420 150 L0 150 Z" fill="url(#areaFill)"/>
+                  <path d="M0 118 C35 108 43 94 72 102 S120 75 145 88 S193 56 216 67 S265 48 290 59 S335 19 360 36 S394 14 420 8" fill="none" stroke="#c67b4e" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                  <circle cx="360" cy="36" r="4" fill="#fff" stroke="#c67b4e" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                </svg>
+              </div>
+              <div class="visual-legend"><span><i class="legend-dot"></i>Ventas</span><span>Lu <b>Ma</b> Mi Ju Vi Sá Do</span></div>
+              <div class="floating-insight"><span aria-hidden="true">↗</span><div><strong>Decisiones más claras</strong><small>Los datos cuentan la historia</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll"><span></span> Desliza para aprender</div>
+      </div>
+    </section>
+
+    <!-- Concepto de BI, contraste entre enfoques y casos de uso en el restaurante. -->
+    <section class="section-padding decision-section" id="decisiones">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">01 / El valor de los datos</span>
+          <h2>Toma de decisiones<br class="d-none d-md-block"> basada en datos</h2>
+          <p>Una buena decisión no depende solo de la intuición. BI ayuda a entender qué ocurre, por qué ocurre y qué acción conviene tomar.</p>
+        </div>
+        <div class="row g-4 align-items-stretch compare-row">
+          <div class="col-md-6">
+            <article class="compare-card intuitive">
+              <div class="compare-icon" aria-hidden="true">◌</div>
+              <div class="compare-label">DECISIÓN INTUITIVA</div>
+              <h3>“Creo que hoy venderemos más.”</h3>
+              <p>Se basa en experiencia y percepción. Puede ser rápida, pero también está expuesta a sesgos y es difícil de comprobar.</p>
+              <ul class="check-list muted-list"><li>Suposiciones difíciles de validar</li><li>Resultados poco predecibles</li></ul>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="compare-card data-driven">
+              <div class="compare-icon" aria-hidden="true">↗</div>
+              <div class="compare-label">DECISIÓN DATA-DRIVEN</div>
+              <h3>“Los viernes vendemos 24% más.”</h3>
+              <p>Usa evidencia relevante para entender el contexto, comparar alternativas y medir el resultado de cada acción.</p>
+              <ul class="check-list"><li>Hipótesis que se pueden comprobar</li><li>Acciones y resultados medibles</li></ul>
+            </article>
+          </div>
+        </div>
+        <div class="examples-block">
+          <div class="examples-title"><span class="eyebrow">BI en acción</span><h3>De la pregunta a una mejor decisión</h3></div>
+          <div class="row g-3">
+            <div class="col-md-4"><article class="example-card"><span class="example-number">01</span><span class="example-icon" aria-hidden="true">🍔</span><h4>Optimizar el menú</h4><p>Compara ventas y margen para destacar las hamburguesas más rentables, no solo las más pedidas.</p><span class="example-tag">Ventas + costos</span></article></div>
+            <div class="col-md-4"><article class="example-card"><span class="example-number">02</span><span class="example-icon" aria-hidden="true">📦</span><h4>Reducir desperdicio</h4><p>Relaciona inventario y demanda histórica para comprar ingredientes en la cantidad adecuada.</p><span class="example-tag">Inventario + demanda</span></article></div>
+            <div class="col-md-4"><article class="example-card"><span class="example-number">03</span><span class="example-icon" aria-hidden="true">⭐</span><h4>Mejorar la experiencia</h4><p>Identifica patrones en reseñas y tiempos de atención para priorizar mejoras concretas.</p><span class="example-tag">Reseñas + servicio</span></article></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagrama ETL y ejemplo de consolidación de fuentes de WestBite. -->
+    <section class="etl-section section-padding" id="proceso-etl">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">02 / De datos a conocimiento</span>
+          <h2>El proceso ETL</h2>
+          <p>ETL organiza los datos para que la información sea confiable, comparable y esté lista para analizar.</p>
+        </div>
+        <div class="etl-flow" aria-label="Etapas del proceso ETL: extraer, transformar y cargar">
+          <article class="etl-step"><div class="etl-step-top"><span class="etl-number">01</span><span class="etl-icon" aria-hidden="true">↓</span></div><span class="etl-verb">E · EXTRACT</span><h3>Extraer</h3><p>Recopila datos desde sus sistemas de origen.</p><div class="etl-example"><b>POS</b><b>Inventario</b><b>Reseñas</b></div></article>
+          <div class="etl-connector" aria-hidden="true">→</div>
+          <article class="etl-step"><div class="etl-step-top"><span class="etl-number">02</span><span class="etl-icon" aria-hidden="true">⌘</span></div><span class="etl-verb">T · TRANSFORM</span><h3>Transformar</h3><p>Limpia, combina y estandariza los registros.</p><div class="etl-example"><b>Unificar fechas</b><b>Corregir datos</b></div></article>
+          <div class="etl-connector" aria-hidden="true">→</div>
+          <article class="etl-step"><div class="etl-step-top"><span class="etl-number">03</span><span class="etl-icon" aria-hidden="true">↑</span></div><span class="etl-verb">L · LOAD</span><h3>Cargar</h3><p>Guarda el resultado en un destino listo para consultar.</p><div class="etl-example"><b>Base analítica</b><b>Dashboard</b></div></article>
+        </div>
+        <div class="etl-case row g-0">
+          <div class="col-lg-4 case-heading"><span class="eyebrow">Ejemplo aplicado</span><h3>Un solo panorama<br>para WestBite</h3><p>Del dato disperso a una visión útil del negocio.</p></div>
+          <div class="col-lg-8 case-content">
+            <div class="case-line"><span class="case-bullet">1</span><p><strong>Extraer:</strong> exportar ventas del POS, existencias del sistema de inventario y reseñas de las plataformas en línea.</p></div>
+            <div class="case-line"><span class="case-bullet">2</span><p><strong>Transformar:</strong> unificar formatos de fecha, normalizar nombres de platos, eliminar duplicados y relacionar las reseñas con el día del servicio.</p></div>
+            <div class="case-line"><span class="case-bullet">3</span><p><strong>Cargar:</strong> consolidar registros limpios en un modelo analítico para comparar ventas, disponibilidad y satisfacción en el dashboard.</p></div>
+          </div>
+        </div>
+        <div class="row g-4 practice-row">
+          <div class="col-md-6"><div class="practice-card"><h3><span class="practice-mark good">✓</span> Buenas prácticas</h3><ul><li>Documenta el origen y significado de cada campo.</li><li>Valida calidad, duplicados y valores faltantes.</li><li>Protege los datos personales y limita accesos.</li></ul></div></div>
+          <div class="col-md-6"><div class="practice-card"><h3><span class="practice-mark bad">!</span> Errores comunes</h3><ul><li>Combinar fuentes con fechas o unidades distintas.</li><li>Analizar datos sin revisar su calidad.</li><li>Tratar una correlación como causa comprobada.</li></ul></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- La interfaz se completa en el cliente con las preguntas de js/quiz.js. -->
+    <section class="quiz-section section-padding" id="cuestionario">
+      <div class="container">
+        <div class="section-heading text-center mx-auto">
+          <span class="eyebrow">03 / Comprueba lo aprendido</span>
+          <h2>¿Listo para pensar<br>como analista?</h2>
+          <p>Responde 8 preguntas y descubre cuánto sabes de inteligencia de negocios.</p>
+        </div>
+        <div class="quiz-shell" id="quizApp">
+          <div class="quiz-header">
+            <div><span class="quiz-kicker">RETO WESTBITE</span><h3 id="questionCounter">Pregunta 1 de 8</h3></div>
+            <div class="quiz-score"><span>Tu puntaje</span><strong id="currentScore">0 <small>pts</small></strong></div>
+          </div>
+          <div class="progress quiz-progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+          </div>
+          <div class="quiz-content" id="quizContent">
+            <p class="question-category" id="questionCategory"></p>
+            <h4 class="quiz-question" id="questionText"></h4>
+            <div class="answer-list" id="answerList"></div>
+            <div class="quiz-feedback" id="quizFeedback" aria-live="polite" hidden></div>
+            <div class="quiz-actions"><span class="quiz-hint">Selecciona una respuesta para continuar</span><button class="btn btn-primary-custom" id="nextQuestion" type="button" disabled>Siguiente <span aria-hidden="true">→</span></button></div>
+          </div>
+          <div class="quiz-result" id="quizResult" hidden aria-live="polite">
+            <div class="result-medal" aria-hidden="true">✦</div>
+            <span class="quiz-kicker">RETO COMPLETADO</span>
+            <h3 id="resultTitle"></h3>
+            <p id="resultMessage"></p>
+            <div class="result-score" id="finalScore"></div>
+            <div class="badge-unlocked" id="earnedBadge"></div>
+            <button class="btn btn-primary-custom" id="retryQuiz" type="button">Reintentar <span aria-hidden="true">↻</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© <span data-current-year></span> · Autor: Equipo WestBite</span><a href="dashboard.html">Conoce el dashboard <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>

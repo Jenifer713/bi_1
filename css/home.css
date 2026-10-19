@@ -1,0 +1,156 @@
+/* Portada del curso y tarjeta ilustrativa de métricas. */
+.hero-section { position: relative; overflow: hidden; padding: 92px 0 65px; background: radial-gradient(ellipse at 82% 38%, rgba(230, 163, 110, .15), transparent 38%); }
+.hero-section::before { position: absolute; top: -180px; left: -210px; width: 460px; height: 460px; border: 1px solid rgba(36, 59, 53, .05); border-radius: 50%; content: ""; }
+.hero-section .container { position: relative; }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--secondary); }
+.hero-section h1 { margin: 18px 0; font-size: clamp(42px, 6vw, 66px); letter-spacing: -.065em; }
+.hero-section h1 span { color: var(--secondary); }
+.hero-lead { max-width: 515px; margin-bottom: 27px; font-size: 17px; line-height: 1.75; }
+.text-link { color: var(--primary); font-size: 13px; font-weight: 700; }
+.text-link:hover { color: var(--secondary); }
+.hero-proof { display: flex; align-items: center; gap: 9px; margin-top: 29px; color: #7d8781; font-size: 12px; }
+.proof-icon { color: var(--secondary); font-size: 16px; }
+.hero-visual { position: relative; max-width: 465px; margin: 0 auto; padding: 26px 27px 24px; border: 1px solid rgba(36, 59, 53, .08); border-radius: 17px; background: rgba(255, 255, 255, .91); box-shadow: 0 24px 70px rgba(36, 59, 53, .09); }
+.visual-top, .visual-legend { display: flex; align-items: center; justify-content: space-between; color: #718078; font-size: 11px; }
+.visual-top { font-weight: 600; }
+.live-dot { color: var(--success); font-size: 9px; font-weight: 700; letter-spacing: .08em; }
+.visual-number { margin-top: 28px; color: var(--primary); font-family: var(--font-heading); font-size: 38px; font-weight: 800; letter-spacing: -.055em; }
+.visual-number span { display: inline-block; margin-left: 7px; padding: 4px 7px; border-radius: 5px; background: #eaf4ee; color: var(--success); font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0; vertical-align: middle; }
+.visual-caption { color: #89928d; font-size: 11px; }
+.mini-chart { position: relative; height: 150px; margin-top: 22px; }
+.chart-grid { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 36px, #eef0ec 37px, transparent 38px); }
+.mini-chart svg { position: relative; width: 100%; height: 100%; }
+.visual-legend { margin-top: 7px; font-size: 10px; }
+.visual-legend span:first-child { display: flex; align-items: center; gap: 7px; }
+.visual-legend b { color: var(--primary); }
+.legend-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--secondary); }
+.floating-insight { position: absolute; right: -22px; bottom: 58px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid rgba(36, 59, 53, .06); border-radius: 10px; background: white; box-shadow: 0 12px 28px rgba(36, 59, 53, .1); color: var(--secondary); font-size: 20px; }
+.floating-insight div { display: grid; gap: 1px; }
+.floating-insight strong { color: var(--primary); font-size: 11px; }
+.floating-insight small { color: #89928d; font-size: 9px; }
+.hero-scroll { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 65px; color: #99a19d; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.hero-scroll span { width: 5px; height: 5px; border-radius: 50%; background: var(--secondary); }
+/* Comparativas y ejemplos de decisiones basadas en evidencia. */
+.decision-section { background: var(--surface); }
+.compare-card { height: 100%; padding: 28px 30px; border: 1px solid var(--line); border-radius: 12px; background: #fbfaf8; }
+.data-driven { border-color: rgba(46, 128, 94, .21); background: #f8fbf8; }
+.compare-icon { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 22px; border-radius: 10px; background: #eeefeb; color: #78837d; font-size: 20px; }
+.data-driven .compare-icon { background: #e8f2eb; color: var(--success); }
+.compare-label { margin-bottom: 8px; color: #929a95; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.data-driven .compare-label { color: var(--success); }
+.compare-card h3 { margin: 0 0 12px; font-size: 21px; }
+.compare-card p { margin-bottom: 19px; font-size: 13px; }
+.check-list { display: grid; gap: 8px; margin: 0; padding: 0; color: #4c6e5e; font-size: 12px; list-style: none; }
+.check-list li::before { margin-right: 8px; color: var(--success); content: "✓"; font-weight: 700; }
+.muted-list { color: #848d87; }
+.muted-list li::before { color: #9ca59f; }
+.examples-block { margin-top: 65px; }
+.examples-title { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 23px; }
+.examples-title h3 { margin: 0; font-size: 20px; }
+.example-card { position: relative; height: 100%; min-height: 220px; padding: 23px; border: 1px solid var(--line); border-radius: 10px; transition: transform .2s ease, box-shadow .2s ease; }
+.example-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(36, 59, 53, .07); }
+.example-number { position: absolute; top: 20px; right: 22px; color: #d0d4d0; font-family: var(--font-heading); font-size: 12px; font-weight: 700; }
+.example-icon { display: block; margin-bottom: 15px; font-size: 23px; }
+.example-card h4 { margin-bottom: 8px; font-size: 16px; }
+.example-card p { margin-bottom: 15px; font-size: 12px; line-height: 1.6; }
+.example-tag { display: inline-block; padding: 4px 8px; border-radius: 5px; background: #f4f2ed; color: #78817b; font-size: 9px; font-weight: 600; }
+/* Diagrama de flujo y caso práctico de ETL. */
+.etl-section { background: var(--bg); }
+.etl-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 18px; }
+.etl-step { padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.etl-step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 19px; }
+.etl-number { color: #adb5b0; font-family: var(--font-heading); font-size: 12px; font-weight: 700; }
+.etl-icon { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 8px; background: #f5eee8; color: var(--secondary); font-size: 17px; }
+.etl-verb { color: var(--secondary); font-size: 9px; font-weight: 700; letter-spacing: .1em; }
+.etl-step h3 { margin: 5px 0 7px; font-size: 20px; }
+.etl-step p { min-height: 42px; margin: 0 0 13px; font-size: 12px; }
+.etl-example { display: flex; flex-wrap: wrap; gap: 5px; }
+.etl-example b { padding: 4px 7px; border-radius: 5px; background: #f6f6f3; color: #728078; font-size: 9px; font-weight: 600; }
+.etl-connector { color: #b0b9b3; font-size: 21px; }
+.etl-case { margin-top: 38px; overflow: hidden; border: 1px solid #e6e7e0; border-radius: 12px; background: white; }
+.case-heading { padding: 28px; background: var(--primary); }
+.case-heading .eyebrow { color: #e5b38e; }
+.case-heading h3 { margin: 11px 0; color: white; font-size: 23px; }
+.case-heading p { margin: 0; color: #c0cbc5; font-size: 12px; }
+.case-content { display: grid; align-content: center; gap: 8px; padding: 24px 28px; }
+.case-line { display: flex; align-items: flex-start; gap: 12px; }
+.case-bullet { flex: 0 0 auto; display: grid; width: 23px; height: 23px; place-items: center; border-radius: 50%; background: #f5eee8; color: var(--secondary); font-size: 10px; font-weight: 700; }
+.case-line p { margin: 0; font-size: 12px; }
+.case-line strong { color: var(--primary); }
+.practice-row { margin-top: 25px; }
+.practice-card { height: 100%; padding: 22px 24px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.65); }
+.practice-card h3 { margin-bottom: 15px; font-size: 15px; }
+.practice-mark { display: inline-grid; width: 22px; height: 22px; place-items: center; margin-right: 6px; border-radius: 6px; font-size: 12px; }
+.practice-mark.good { background: #e7f2eb; color: var(--success); }
+.practice-mark.bad { background: #faecea; color: var(--danger); }
+.practice-card ul { display: grid; gap: 8px; margin: 0; padding-left: 17px; color: #727d77; font-size: 12px; }
+/* Cuestionario: progreso, opciones, feedback y pantalla de resultados. */
+.quiz-section { background: #f2f0ea; }
+.quiz-section .section-heading { margin-bottom: 38px; }
+.quiz-section .section-heading h2 { font-size: clamp(32px, 4vw, 44px); }
+.quiz-shell { max-width: 760px; margin: 0 auto; padding: 31px 35px; border: 1px solid rgba(36, 59, 53, .08); border-radius: 15px; background: white; box-shadow: 0 18px 50px rgba(36, 59, 53, .07); }
+.quiz-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.quiz-kicker { color: var(--secondary); font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.quiz-header h3 { margin: 4px 0 0; font-size: 18px; }
+.quiz-score { text-align: right; }
+.quiz-score span { display: block; color: #8a948e; font-size: 10px; }
+.quiz-score strong { color: var(--primary); font-family: var(--font-heading); font-size: 20px; }
+.quiz-score small { color: #8a948e; font-family: var(--font-body); font-size: 10px; }
+.quiz-progress { height: 5px; margin-bottom: 28px; border-radius: 10px; background: #eff0ed; }
+.quiz-progress .progress-bar { border-radius: 10px; background: var(--secondary); transition: width .3s ease; }
+.question-category { margin-bottom: 6px; color: #a0a7a2; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.quiz-question { max-width: 620px; margin-bottom: 19px; font-size: 20px; letter-spacing: -.025em; }
+.answer-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer-option { display: flex; align-items: center; gap: 11px; width: 100%; min-height: 53px; padding: 10px 13px; border: 1px solid #e7e9e5; border-radius: 8px; background: white; color: #57645d; cursor: pointer; text-align: left; transition: border-color .18s ease, background .18s ease; }
+.answer-option:hover:not(:disabled) { border-color: #c99573; background: #fdfaf7; }
+.answer-option:disabled { cursor: default; }
+.answer-letter { display: grid; flex: 0 0 25px; width: 25px; height: 25px; place-items: center; border-radius: 6px; background: #f2f3f0; color: #7a8580; font-size: 10px; font-weight: 700; }
+.answer-option span:last-child { font-size: 12px; }
+.answer-option.correct { border-color: #75b390; background: #f0f8f3; color: #306c4d; }
+.answer-option.correct .answer-letter { background: #d9eee1; color: var(--success); }
+.answer-option.incorrect { border-color: #d89a95; background: #fcf3f2; color: #9c4943; }
+.answer-option.incorrect .answer-letter { background: #f7dedb; color: var(--danger); }
+.quiz-feedback { margin-top: 13px; padding: 11px 13px; border-radius: 7px; font-size: 12px; }
+.quiz-feedback.feedback-correct { background: #edf7f0; color: #326e4e; }
+.quiz-feedback.feedback-incorrect { background: #fbf0ef; color: #974943; }
+.quiz-actions { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 22px; }
+.quiz-hint { color: #a0a7a2; font-size: 10px; }
+.quiz-actions .btn { min-height: 40px; padding: 0 16px; font-size: 11px; }
+.quiz-result { padding: 22px 0 8px; text-align: center; }
+.result-medal { display: grid; width: 66px; height: 66px; place-items: center; margin: 0 auto 17px; border-radius: 50%; background: #f6eee7; color: var(--secondary); font-size: 30px; }
+.quiz-result h3 { margin: 9px 0; font-size: 29px; }
+.quiz-result > p { margin: 0 auto 14px; font-size: 13px; }
+.result-score { margin-bottom: 16px; color: var(--primary); font-family: var(--font-heading); font-size: 31px; font-weight: 800; }
+.result-score small { color: #929b95; font-family: var(--font-body); font-size: 12px; font-weight: 500; }
+.badge-unlocked { width: fit-content; margin: 0 auto 22px; padding: 8px 13px; border: 1px solid #ead8c8; border-radius: 20px; background: #fbf5ef; color: #8c5c3e; font-size: 11px; font-weight: 700; }
+.quiz-result .btn { margin: 0 auto; }
+[hidden] { display: none !important; }
+
+@media (max-width: 991.98px) {
+  .hero-section { padding-top: 70px; }
+  .hero-visual { margin-top: 10px; }
+  .floating-insight { right: -9px; }
+  .etl-flow { gap: 10px; }
+  .etl-step { padding: 17px; }
+}
+@media (max-width: 767.98px) {
+  .hero-section { padding: 58px 0 40px; }
+  .hero-section h1 { font-size: clamp(40px, 11vw, 54px); }
+  .hero-lead { font-size: 15px; }
+  .hero-scroll { margin-top: 40px; }
+  .hero-visual { padding: 22px; }
+  .floating-insight { right: -7px; bottom: 45px; }
+  .examples-title { align-items: start; flex-direction: column; }
+  .examples-title h3 { font-size: 18px; }
+  .etl-flow { grid-template-columns: 1fr; gap: 10px; }
+  .etl-connector { justify-self: center; transform: rotate(90deg); line-height: 1; }
+  .etl-step p { min-height: auto; }
+  .case-heading, .case-content { padding: 22px; }
+  .quiz-shell { padding: 24px 20px; }
+  .answer-list { grid-template-columns: 1fr; }
+  .quiz-question { font-size: 18px; }
+}
+@media (max-width: 380px) {
+  .quiz-actions { align-items: stretch; flex-direction: column; }
+  .quiz-actions .btn { align-self: flex-end; }
+}

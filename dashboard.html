@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard interactivo de ventas, operaciones y satisfacción de WestBite Bistro.">
+  <title>Dashboard ejecutivo | WestBite Bistro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html"><span class="brand-mark" aria-hidden="true">W</span> WestBite <span class="brand-light">| Bistro</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Fundamentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#proceso-etl">Proceso ETL</a></li>
+          <li class="nav-item"><a class="nav-link nav-cta active" aria-current="page" href="dashboard.html">Dashboard <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-main" id="contenido">
+    <div class="container">
+      <!-- Controles de periodo e indicadores ejecutivos del restaurante. -->
+      <header class="dashboard-heading">
+        <div><span class="eyebrow">WESTBITE BISTRO <span class="status-pill"><i></i> OPERACIÓN ESTABLE</span></span><h1>Resumen del negocio</h1><p>Una mirada clara al rendimiento de tu restaurante.</p></div>
+        <div class="range-control"><label for="dateRange">Periodo</label><select class="form-select" id="dateRange" aria-label="Seleccionar periodo"><option value="7">Últimos 7 días</option><option value="30" selected>Últimos 30 días</option><option value="90">Últimos 90 días</option></select></div>
+      </header>
+      <section class="kpi-grid" aria-label="Indicadores clave">
+        <article class="kpi-card"><div class="kpi-top"><span>Ventas totales</span><span class="kpi-icon" aria-hidden="true">＄</span></div><strong class="kpi-value" id="kpiSales">—</strong><div class="kpi-foot"><span class="kpi-change positive" id="salesChange">—</span><span>vs. periodo anterior</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Ticket promedio</span><span class="kpi-icon" aria-hidden="true">◉</span></div><strong class="kpi-value" id="kpiTicket">—</strong><div class="kpi-foot"><span class="kpi-change positive" id="ticketChange">—</span><span>por mesa</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Pedidos / comensales</span><span class="kpi-icon" aria-hidden="true">♧</span></div><strong class="kpi-value" id="kpiOrders">—</strong><div class="kpi-foot"><span class="kpi-change positive" id="ordersChange">—</span><span>pedidos atendidos</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Plato más vendido</span><span class="kpi-icon" aria-hidden="true">✳</span></div><strong class="kpi-value kpi-dish" id="kpiDish">—</strong><div class="kpi-foot"><span id="dishUnits">—</span><span>unidades vendidas</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Satisfacción promedio</span><span class="kpi-icon" aria-hidden="true">☆</span></div><strong class="kpi-value" id="kpiRating">—</strong><div class="kpi-foot"><span class="rating-stars" aria-hidden="true">★★★★★</span><span>de 5.0 estrellas</span></div></article>
+      </section>
+
+      <!-- Chart.js actualiza todas estas gráficas al seleccionar otro periodo. -->
+      <section class="charts-grid" aria-label="Visualizaciones del negocio">
+        <article class="chart-card chart-wide"><div class="chart-heading"><div><span class="chart-eyebrow">RENDIMIENTO</span><h2>Evolución de ventas</h2></div><span class="chart-unit">USD</span></div><div class="chart-container line-container"><canvas id="salesTrendChart" role="img" aria-label="Gráfica de línea con la evolución diaria de ventas"></canvas></div></article>
+        <article class="chart-card"><div class="chart-heading"><div><span class="chart-eyebrow">COMPOSICIÓN</span><h2>Ventas por categoría</h2></div></div><div class="chart-container"><canvas id="categoryChart" role="img" aria-label="Gráfica de barras de ventas por categoría"></canvas></div></article>
+        <article class="chart-card"><div class="chart-heading"><div><span class="chart-eyebrow">PREFERENCIAS</span><h2>Métodos de pago</h2></div></div><div class="chart-container doughnut-container"><canvas id="paymentChart" role="img" aria-label="Gráfica de dona con la distribución de métodos de pago"></canvas></div></article>
+        <article class="chart-card chart-wide"><div class="chart-heading"><div><span class="chart-eyebrow">PRODUCTOS</span><h2>Top 5 platos más vendidos</h2></div><span class="chart-unit">UNIDADES</span></div><div class="chart-container top-container"><canvas id="topDishesChart" role="img" aria-label="Gráfica horizontal de los cinco platos más vendidos"></canvas></div></article>
+        <article class="chart-card"><div class="chart-heading"><div><span class="chart-eyebrow">EXPERIENCIA</span><h2>Calificación por aspecto</h2></div></div><div class="chart-container radar-container"><canvas id="reviewsChart" role="img" aria-label="Gráfica radar con la calificación de aspectos del restaurante"></canvas></div></article>
+      </section>
+
+      <!-- La búsqueda filtra en cliente los diez pedidos de demostración. -->
+      <section class="orders-card">
+        <div class="orders-heading"><div><span class="chart-eyebrow">ACTIVIDAD RECIENTE</span><h2>Últimos pedidos</h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="orderSearch" placeholder="Buscar pedidos..." aria-label="Buscar en los pedidos"></label></div>
+        <div class="table-responsive">
+          <table class="table orders-table">
+            <thead><tr><th scope="col">ID</th><th scope="col">Mesa</th><th scope="col">Plato principal</th><th scope="col">Total</th><th scope="col">Hora</th><th scope="col">Estado</th></tr></thead>
+            <tbody id="ordersTableBody"></tbody>
+          </table>
+          <p class="empty-orders" id="emptyOrders" hidden>No hay pedidos que coincidan con tu búsqueda.</p>
+        </div>
+        <div class="table-footer"><span id="ordersCount">Mostrando 0 pedidos</span><span>Datos de demostración</span></div>
+      </section>
+      <p class="dashboard-note"><span aria-hidden="true">ⓘ</span> Datos simulados con fines educativos. Las cifras se actualizan al cambiar el periodo.</p>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© <span data-current-year></span> · Autor: Equipo WestBite</span><a href="index.html">Volver a fundamentos <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>
