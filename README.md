@@ -6,6 +6,7 @@ Material educativo interactivo sobre Business Intelligence, toma de decisiones b
 
 - `index.html`: conceptos de BI, ejemplos aplicados a restaurantes, diagrama ETL y cuestionario gamificado.
 - `dashboard.html`: KPIs, cinco gráficas interactivas y tabla de pedidos filtrable.
+- `silabo.html`: guía visual interactiva del sílabo universitario, presentada como centro de control de misiones BI.
 - `css/`: sistema de diseño compartido, estilos de la página educativa y estilos del dashboard.
 - `js/`: utilidades comunes, lógica del cuestionario y datos e inicialización de Chart.js.
 - `img/`: espacio para recursos visuales propios en formato SVG; no se requieren imágenes binarias.
@@ -26,7 +27,7 @@ Las librerías y fuentes se sirven desde CDN; no hay backend, proceso de compila
 2. Abre el repositorio y selecciona **Code → Codespaces → Create codespace on main**.
 3. Para usar Live Server, abre la pestaña **Extensions**, busca e instala **Live Server**.
 4. Abre `index.html` desde el explorador del proyecto y selecciona **Open with Live Server**. La extensión servirá el sitio y abrirá la vista previa.
-5. Usa el enlace **Dashboard** de la navegación o abre `dashboard.html` para ver el panel de WestBite Bistro.
+5. Usa la navegación para visitar el **Sílabo** o el **Dashboard** de WestBite Bistro.
 
 Como alternativa, desde la terminal de Codespaces ejecuta:
 

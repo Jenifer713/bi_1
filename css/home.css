@@ -97,7 +97,7 @@
 .quiz-score strong { color: var(--primary); font-family: var(--font-heading); font-size: 20px; }
 .quiz-score small { color: var(--color-muted); font-family: var(--font-body); font-size: 10px; }
 .quiz-progress { height: 5px; margin-bottom: 28px; border-radius: var(--radius-sm); background: var(--color-subtle); }
-.quiz-progress .progress-bar { border-radius: 10px; background: var(--secondary); transition: width .3s ease; }
+.quiz-progress .progress-bar { width: 0; border-radius: 10px; background: var(--secondary); transition: width .3s ease; }
 .question-category { margin-bottom: 6px; color: var(--color-muted); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .quiz-question { max-width: 620px; margin-bottom: 19px; font-size: 20px; letter-spacing: -.025em; }
 .answer-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
